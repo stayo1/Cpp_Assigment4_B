@@ -46,7 +46,7 @@ namespace ariel
         Character *victim = FindNearestWarrior(enemy);
         for (int i = 0; i < size; i++)
         {
-            if (this->warriors[i]->getID() == "Cowboy")
+            if (this->warriors[i]->getID() == "Ninja")
                 continue;
             if (!victim->isAlive())
             {
@@ -58,7 +58,7 @@ namespace ariel
         }
         for (int i = 0; i < size; i++)
         {
-            if (this->warriors[i]->getID() == "Ninja")
+            if (this->warriors[i]->getID() == "Cowboy")
                 continue;
             if (!victim->isAlive())
             {
