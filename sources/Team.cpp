@@ -40,6 +40,10 @@ namespace ariel
     {
         if (enemy == nullptr)
             throw invalid_argument("There is no enemy to attack");
+        if (this == enemy)
+            throw runtime_error("cant attack itself");
+        if (!this->stillAlive())
+            throw runtime_error("The attacker team are dead");
         if (!enemy->stillAlive())
             throw runtime_error("The enemy team are dead");
         leader = FindNearestWarrior(this);
